@@ -47,7 +47,7 @@ export class CurrencyService {
         return new Currency(parsed.iso, parsed.symbol, parsed.conversionRate);
     }
 
-    private async setCurrencyInCache(currency: Currency): Promise<any> {
+    private async setCurrencyInCache(currency: Currency): Promise<void> {
         await redisClient.client.set(`currency-${currency.iso}`, JSON.stringify(currency), { EX: 60 * 60 * 24 });  // ONE DAY
     }
 
