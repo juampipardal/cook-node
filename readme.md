@@ -39,6 +39,12 @@ Once we have setted a valid Node version and installed all dependencies, you jus
 If everything goes fine, your should see in terminal App listening on port 8000.
 
 
+## Tests
+
+I would have liked to add more tests. I added one test file for `traces.service.ts`, with some posible cases, like error cases and OK cases.
+To run tests, we need to execute `npm run test:unit`.
+The tests runs with Jest.
+
 
 ## Deploy
 
